@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+@media screen and (max-width: 354px) {
+    body { padding-top: 150px; }
+}
+@media screen and (min-width: 355px) and (max-width: 564px) {
+    body { padding-top: 95px; }
+}
+@media screen and (min-width: 565px) {
+    body { padding-top: 50px; }
+}
+
+@font-face {
+	font-family: Roboto;
+	src: url(assets/fonts/Roboto-Regular.ttf) format('truetype');
+}
+html, body {
+	margin: 0;
+	height: 100%;
+}
+.btn
+{
+    background-color: transparent;
+}
+.steevanz
+{
+	height: auto; 
+}
+  
