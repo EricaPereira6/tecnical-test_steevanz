@@ -1,3 +1,5 @@
+<!-- navbar -->
+<app-navbar></app-navbar>
 <div class="yourdatapage" id="page">
     <app-checkoutnav [st]="whitebutton" [nd]="whitebutton" [rd]="blackbutton" [th]="blackbutton"></app-checkoutnav>
     <app-freedelivbar></app-freedelivbar>
@@ -23,7 +25,7 @@
                     <div class="col-sm-8">
                         <div class="row pr-6">
                             <div class="col px-6">
-                                <app-textinput [labeltext]="firstname" [labelstyle]="tinystyle" [inputbar]="style" [formName]="firstname"></app-textinput>
+                                <app-textinput [labeltext]="firstname" [labelstyle]="tinystyle" [inputbar]="style"></app-textinput>
                             </div>
                             <div class="col px-6">
                                 <app-textinput [labeltext]="lastname" [labelstyle]="tinystyle" [inputbar]="style"></app-textinput>
@@ -95,11 +97,13 @@
                         <app-genericbutton [text]="previous" [border]="white" [redirect]="checkout"></app-genericbutton>
                     </div>
                     <div class="col-auto px-6 float-right">
-                        <!--<app-genericbutton [text]="next" [border]="black" [redirect]="payment"></app-genericbutton>-->
-                        <button type="button" class="btn submit-button" (click)="onSubmit()">NEXT</button>
+                        <app-genericbutton [text]="next" [border]="black" [redirect]="payment"></app-genericbutton>
+                        <!--<button type="button" class="btn submit-button" (click)="onSubmit()">NEXT</button>-->
                     </div>
                 </div>
             </div>
          </form>
     </div>
 </div>
+<!-- footer -->
+<app-footer></app-footer>

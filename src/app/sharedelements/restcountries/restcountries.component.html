@@ -1,5 +1,12 @@
-<select>
-    <option *ngFor="let country of countries" [value]="country.name.common">
-      {{ country.name.common }}
-    </option>
-  </select>
+<div class="wrap-it">
+  <label for="name" class="control-label pr-8 tiny-label">Country*</label>
+    <div class="row">
+      <div class="col p-0">
+        <select class="p-1 m-1 wrap-it">
+          <option *ngFor="let country of countries" [value]="country.name.common">
+                {{ country.name.common }}
+          </option>
+        </select>
+      </div>
+  </div>   
+</div>

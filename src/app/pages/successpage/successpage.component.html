@@ -1,18 +1,23 @@
-<div class="successpage" id="successpage">
-    <div class="container-fluid h-100" id="divSuccessContainer">
+<div class="successpage d-flex align-items-center">
+    <div class="container-fluid" id="divSuccessContainer">
         <div class="row">
-            <div class="col">
-                <h1>Congratulations!</h1>
-                <h3>You will be evaluated in the next few days.</h3>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy text 
-                ever since the 1500s.
+            <div class="col pl-6">
                 <div>
-                    <button>HOME</button>
+                    <img class="steevanz h-90 py-6" src="assets/images/steevanz.png"/>
+                    <h1 class="py-4">Congratulations!</h1>
+                    <h3>You will be evaluated in the next few days.</h3>
+                    <div class="parag py-3">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been the industry's standard dummy text 
+                        ever since the 1500s.
+                    </div>
+                    <div class="py-4 d-flex justify-content-center">
+                        <app-genericbutton [text]="home" [border]="black" [redirect]="homepage"></app-genericbutton>
+                    </div>
                 </div>
             </div>
-            <div class="col h-100">
-                <img src="assets/images/page_5.png"/>
+            <div class="col-auto d-flex align-items-center">
+                <img src="assets/images/page_5.png" class="image-5"/>
             </div>
         </div>
     </div>

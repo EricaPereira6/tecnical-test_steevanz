@@ -9,10 +9,10 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 export class YourdatapageComponent {
 
+  // email : new FormControl('', [Validators.required, Validators.email])
 
   data = new FormGroup({
-    firstname : new FormControl('', Validators.required),
-    email : new FormControl('', [Validators.required, Validators.email])
+    firstname : new FormControl('', Validators.required)
   });
 
   onSubmit(){

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-textinput',
@@ -13,6 +13,13 @@ export class TextinputComponent {
   @Input() inputbar: string = '';
   @Input() icon: string = '';
   @Input() formName: string = '';
-  
+
+  @Input() firstname: string = '';
+  @Output() valueChange: EventEmitter<string> = new EventEmitter();
+
+  onInput(event: any) {
+    //this.valueChange.emit(value);
+    console.log("event", event);
+  } 
 
 }

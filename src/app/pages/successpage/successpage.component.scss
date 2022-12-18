@@ -1,5 +1,57 @@
 .successpage{
-    background:black;
-    height: 100%;
-    color:white;
+    background: #1E1E1E;
+    min-height: 100%;
+}
+@media (max-width: 1107px) { h1 {
+    font-size: 56px;
+  }
+}
+@media (min-width: 1108px) { h1 {
+    font-size: 56px;
+  }
+}
+@media (min-width: 1250px) { h1 {
+    font-size: 76px;
+  }
+}
+@media (min-width: 1400px) { h1 {
+    font-size: 96px;
+  }
+}
+h1
+{
+    font-family: 'Cormorant';
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    /* identical to box height, or 96px */
+
+    color: #FFFFFF;
+    
+}
+h3
+{
+    font-family: 'Cormorant';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 100%;
+    /* identical to box height, or 40px */
+
+    color: #FFFFFF;
+}
+.parag
+{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #FFFFFF;
+}
+.image-5
+{
+    max-width: 90%;
+    height: auto;
 }

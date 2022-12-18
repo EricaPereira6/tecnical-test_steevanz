@@ -1,68 +1,108 @@
+<!-- navbar -->
+<app-navbar></app-navbar>
 <div class="paymentpage" id="page">
     <app-checkoutnav [st]="whitebutton" [nd]="whitebutton" [rd]="whitebutton" [th]="blackbutton"></app-checkoutnav>
     <app-freedelivbar></app-freedelivbar>
     <app-totalpermonth  [size]="size" [quantity]="quantity" [additionalcomment]="comment"></app-totalpermonth>
     <div class="paymentpage-page">
-        <div class="container-fluid">
-            <div class="row py-3">
-                <div class="col-auto d-flex align-items-center">
-                    <app-ckoutbutton [text]="text2" [color]="nottintedblack" [border]="blackborder"></app-ckoutbutton>
+        <form [formGroup]="creditCardForm" (ngSubmit)="submit()">
+            <div class="container-fluid">
+                <div class="row py-3">
+                    <div class="col-auto d-flex align-items-center">
+                        <app-ckoutbutton [text]="text2" [color]="nottintedblack" [border]="blackborder"></app-ckoutbutton>
+                    </div>
+                    <div class="col check-card px-0">Payment</div>
                 </div>
-                <div class="col check-card px-0">Payment</div>
-            </div>
-            <div class="row py-3">
-                <div class="col">
-                    <div class="row">
-                        <div class="col-auto">
-                            <img class="img-fluid offset-sm-1" src="assets/images/page_4.png" alt="Responsive image"/>
+                <div class="row py-3">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-auto">
+                                <img class="img-fluid offset-sm-1" src="assets/images/page_4.png" alt="Responsive image"/>
+                            </div>
+                            <div class="col visa">Pay securely with your credit card.</div>
                         </div>
-                        <div class="col visa">Pay securely with your credit card.</div>
-                    </div>
-                    <div class="row pt-6 px-6">
-                        <div class="col">
-                            <app-textinput [labeltext]="creditcard" [labelstyle]="tinystyle" [inputbar]="style"></app-textinput>
+                        <div class="row pt-6 px-6">
+                            <div class="col">
+                                <!--
+                                    <app-textinput formControlName="creditCard>" [labeltext]="creditcard" [labelstyle]="tinystyle" [inputbar]="style"></app-textinput>
+                                -->
+                                <label for="name" class="control-label pr-8 tiny-label">Credit Card*</label>
+                                <div class="row">
+                                    <div class="col p-0">
+                                        <input type="text" formControlName="creditCardNumber" class="form-control" ngModel required>
+                                        <div *ngIf="creditCardNumberControl.hasError('required')">Credit card number is required</div>
+                                        <div *ngIf="creditCardNumberControl.hasError('pattern')">Credit card number is invalid</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row px-2">
+                            <div class="col px-6">
+                                <!--
+                                    <app-textinput formControlName="date" [labeltext]="date" [labelstyle]="tinystyle" [inputbar]="style"></app-textinput>
+                                -->
+                                <label for="name" class="control-label pr-8 tiny-label">Expiration Date*</label>
+                                <div class="row">
+                                    <div class="col p-0">
+                                        <input type="text" formControlName="expirationDate" class="form-control" >
+                                        <div *ngIf="expirationDateControl.hasError('required')">Expiration date is required</div>
+                                        <div *ngIf="expirationDateControl.hasError('pattern')">Expiration date is invalid</div>
+                                        <div *ngIf="expirationDateControl.hasError('expirationDateInvalid')">Expiration date is in the past</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col px-6">
+                                <!--
+                                <app-textinput formControlName="cvc" [labeltext]="cvc" [labelstyle]="tinystyle" [inputbar]="style"></app-textinput>
+                                -->
+                                <label for="name" class="control-label pr-8 tiny-label">CVC*</label>
+                                <div class="row">
+                                    <div class="col p-0">
+                                        <input type="text" formControlName="cvc" class="form-control"  
+                                        [class.is-invalid]="cvcControl.invalid && cvcControl.touched">
+                                        <div *ngIf="cvcControl.hasError('required')">CVC is required</div>
+                                        <div *ngIf="cvcControl.hasError('pattern')">CVC is invalid</div>
+                                    </div>
+                                </div>                                
+                            </div>
                         </div>
                     </div>
-                    <div class="row px-2">
-                        <div class="col px-6">
-                            <app-textinput [labeltext]="date" [labelstyle]="tinystyle" [inputbar]="style"></app-textinput>
-                        </div>
-                        <div class="col px-6">
-                            <app-textinput [labeltext]="cvc" [labelstyle]="tinystyle" [inputbar]="style"></app-textinput>
+                    <div class="col-sm-1"></div>
+                    <div class="col p-6">
+                        <div class="button-class float-right">
+                            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+                            Resume
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-1"></div>
-                <div class="col p-6">
-                    <div class="button-class float-right">
-                        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
-                          Resume
-                        </button>
+                <div class="row pr-6">
+                    <div class="col px-5">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="accepted" id="terms">
+                            <label class="form-check-label" for="terms">
+                                I have read and accept the store's terms and conditions*.
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="row pr-6">
-                <div class="col px-5">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="accepted" id="terms">
-                        <label class="form-check-label" for="terms">
-                            I have read and accept the store's terms and conditions*.
-                        </label>
+            <div class="container-fluid">
+                <div class="row py-6">
+                    <div class="col px-6">
+                        <app-genericbutton [text]="previous" [border]="white" [redirect]="yourdata"></app-genericbutton>
+                        
+                    </div>
+                    <div class="col-auto px-6 float-right">
+                        <!--
+                            <app-genericbutton [text]="next" [border]="black" [redirect]="success"></app-genericbutton>
+                        -->
+                        <button type="submit" class="black-button-ckout" (click)="onClick('/success')" [disabled]="!creditCardForm.valid">CHECKOUT</button>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row py-6">
-                <div class="col px-6">
-                    <app-genericbutton [text]="previous" [border]="white" [redirect]="yourdata"></app-genericbutton>
-                </div>
-                <div class="col-auto px-6 float-right">
-                    <app-genericbutton [text]="next" [border]="black" [redirect]="success"></app-genericbutton>
-                </div>
-            </div>
-        </div>
+        </form>
     </div>
 </div>
-
+<!-- footer -->
+<app-footer></app-footer>
