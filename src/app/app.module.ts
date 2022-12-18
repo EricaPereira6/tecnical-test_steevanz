@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,7 @@ import { GenericbuttonComponent } from './sharedelements/singlecomponents/generi
 import { TextinputComponent } from './sharedelements/singlecomponents/textinput/textinput.component';
 import { TotalpermonthComponent } from './sharedelements/totalpermonth/totalpermonth.component';
 import { RestcountriesComponent } from './sharedelements/restcountries/restcountries.component';
+import { ReactiveformComponent } from './sharedelements/reactiveform/reactiveform.component';
 
 @NgModule({
   declarations: [
@@ -35,12 +37,14 @@ import { RestcountriesComponent } from './sharedelements/restcountries/restcount
     GenericbuttonComponent,
     TextinputComponent,
     TotalpermonthComponent,
-    RestcountriesComponent
+    RestcountriesComponent,
+    ReactiveformComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

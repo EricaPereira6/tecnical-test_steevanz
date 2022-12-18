@@ -12,6 +12,7 @@ export class TextinputComponent {
   @Input() labelstyle: string = '';
   @Input() inputbar: string = '';
   @Input() icon: string = '';
+  @Input() formName: string = '';
   
 
 }

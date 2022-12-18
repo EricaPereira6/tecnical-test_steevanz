@@ -1,11 +1,27 @@
 import { Component, Input } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-yourdatapage',
   templateUrl: './yourdatapage.component.html',
   styleUrls: ['./yourdatapage.component.scss']
 })
+
 export class YourdatapageComponent {
+
+
+  data = new FormGroup({
+    firstname : new FormControl('', Validators.required),
+    email : new FormControl('', [Validators.required, Validators.email])
+  });
+
+  onSubmit(){
+    if (this.data.valid){
+      console.log(this.data.value);
+    }
+  }
+
+
 
   @Input() whitebutton: string = 'tinted';
   @Input() blackbutton: string = 'not-tinted-white';
