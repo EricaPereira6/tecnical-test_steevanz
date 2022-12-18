@@ -10,6 +10,9 @@ import { PaymentpageComponent } from './pages/paymentpage/paymentpage.component'
 import { YourdatapageComponent } from './pages/yourdatapage/yourdatapage.component';
 import { SuccesspageComponent } from './pages/successpage/successpage.component';
 import { CheckoutpageComponent } from './pages/checkoutpage/checkoutpage.component';
+import { CheckoutnavComponent } from './sharedelements/checkoutnav/checkoutnav.component';
+import { CkoutbuttonComponent } from './sharedelements/singlecomponents/ckoutbutton/ckoutbutton.component';
+import { FreedelivbarComponent } from './sharedelements/freedelivbar/freedelivbar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { CheckoutpageComponent } from './pages/checkoutpage/checkoutpage.compone
     PaymentpageComponent,
     YourdatapageComponent,
     SuccesspageComponent,
-    CheckoutpageComponent
+    CheckoutpageComponent,
+    CheckoutnavComponent,
+    CkoutbuttonComponent,
+    FreedelivbarComponent
   ],
   imports: [
     BrowserModule,

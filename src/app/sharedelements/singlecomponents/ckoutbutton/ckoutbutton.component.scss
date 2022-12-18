@@ -1,0 +1,36 @@
+.ball
+{
+    box-sizing: border-box;
+    width: 25px;
+    height: 25px;
+
+    top: 8.67%;
+    bottom: 88.67%;
+
+    border: 1px solid #FFFFFF;
+
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#tinted
+{
+    color: #1A1A1A;
+    background: white;
+}
+#nottinted
+{
+    color: white;
+    background: transparent;
+}
+p
+{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    /* or 14px */
+}

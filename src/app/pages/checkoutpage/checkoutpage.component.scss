@@ -1,0 +1,91 @@
+.checkoutpage
+{
+    background-color: white;
+}
+#text
+{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    /* identical to box height, or 20px */
+
+
+    color: #1A1A1A;
+}
+.check-card
+{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    /* identical to box height, or 24px */
+
+
+    color: #1A1A1A;
+}
+h1
+{
+    font-family: 'Cormorant';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 20px; 
+
+    width: 100%;
+
+    color: #1A1A1A;
+}
+.subtext
+{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 130%;
+
+    color: #5B5B5B;
+}
+.coupon
+{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    /* identical to box height, or 24px */
+
+
+    color: #1A1A1A;
+}
+.total
+{
+    background: #E9E9E9;
+    min-height: 80px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+
+    color: #5B5B5B;
+}
+p
+{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    color: #5B5B5B;
+}
