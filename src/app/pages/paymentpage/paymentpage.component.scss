@@ -1,0 +1,31 @@
+.visa
+{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    /* or 21px */
+
+
+    color: #5B5B5B;
+}
+.button-class
+{
+    width: 100%;
+}
+.btn
+{
+    background: #E9E9E9;
+    border-radius: 5px;
+    width: 100%;
+}
+.dropdown-toggle::after {
+    float: right;
+    display: flex;
+    justify-content: space-between;
+  align-items: center;
+}
+#text::after{
+    float: left;
+}

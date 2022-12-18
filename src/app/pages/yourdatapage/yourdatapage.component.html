@@ -1,1 +1,103 @@
-<p>yourdatapage works!</p>
+<div class="yourdatapage" id="page">
+    <app-checkoutnav [st]="whitebutton" [nd]="whitebutton" [rd]="blackbutton" [th]="blackbutton"></app-checkoutnav>
+    <app-freedelivbar></app-freedelivbar>
+    <app-totalpermonth  [size]="size" [quantity]="quantity" [additionalcomment]="comment"></app-totalpermonth>
+    <div class="yourdatapage-page">
+        <div class="container-fluid">
+            <div class="row py-3">
+                <div class="col-auto d-flex align-items-center">
+                    <app-ckoutbutton [text]="text2" [color]="nottintedblack" [border]="blackborder"></app-ckoutbutton>
+                </div>
+                <div class="col check-card px-0">YOUR DATA</div>
+            </div>
+            <div class="row">
+                <div class="col-auto">
+                    <app-genericbutton [text]="personal" [border]="black"></app-genericbutton>
+                </div>
+                <div class="col-auto px-0">
+                    <app-genericbutton [text]="company" [border]="white"></app-genericbutton>
+                </div>
+            </div>
+            <div class="row pt-6">
+                <div class="col-sm-8">
+                    <div class="row pr-6">
+                        <div class="col px-6">
+                            <app-textinput [labeltext]="firstname" [labelstyle]="tinystyle" [inputbar]="style"></app-textinput>
+                        </div>
+                        <div class="col px-6">
+                            <app-textinput [labeltext]="lastname" [labelstyle]="tinystyle" [inputbar]="style"></app-textinput>
+                        </div>
+                    </div>
+                    <div class="row pr-6">
+                        <div class="col px-6">
+                            <app-textinput [labeltext]="email" [labelstyle]="tinystyle" [inputbar]="style"></app-textinput>
+                        </div>
+                        <div class="col px-6">
+                            <app-textinput [labeltext]="phone" [labelstyle]="tinystyle" [inputbar]="style"></app-textinput>
+                        </div>
+                    </div>
+                    <div class="row pr-6">
+                        <div class="col px-6">
+                            <!--<app-textinput [labeltext]="country" [labelstyle]="tinystyle" [inputbar]="style"></app-textinput>-->
+                            <app-restcountries></app-restcountries>
+                        </div>
+                        <div class="col px-6">
+                            <app-textinput [labeltext]="location" [labelstyle]="tinystyle" [inputbar]="style"></app-textinput>
+                        </div>
+                    </div>
+                    <div class="row pr-6">
+                        <div class="col px-6">
+                            <app-textinput [labeltext]="address" [labelstyle]="tinystyle" [inputbar]="style"></app-textinput>
+                        </div>
+                    </div>
+                    <div class="row pr-6">
+                        <div class="col px-6">
+                            <app-textinput [labeltext]="postalcode" [labelstyle]="tinystyle" [inputbar]="style"></app-textinput>
+                        </div>
+                        <div class="col px-6">
+                            <app-textinput [labeltext]="vatnumber" [labelstyle]="tinystyle" [inputbar]="style"></app-textinput>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="offer py-1">
+                        <h2>Is this purchase an offer?</h2>
+                        <p>Add a custom message</p>
+                    </div>
+                    <div class="row pt-6">
+                        <div class="col px-4">
+                            <app-textinput [labeltext]="from" [labelstyle]="tinystyle" [inputbar]="style"></app-textinput>
+                        </div>
+                        <div class="col px-4">
+                            <app-textinput [labeltext]="to" [labelstyle]="tinystyle" [inputbar]="style"></app-textinput>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col px-4">
+                            <app-textinput [labeltext]="messagelabel" [labelstyle]="tinystyle" [inputbar]="style" [inputtext]="message"></app-textinput>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pr-6">
+                <div class="col px-5 pt-5">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="add" id="bill">
+                        <label class="form-check-label" for="bill">Add a delivery address different from the billing address.</label>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="container-fluid">
+            <div class="row py-6">
+                <div class="col px-6">
+                    <app-genericbutton [text]="previous" [border]="white" [redirect]="checkout"></app-genericbutton>
+                </div>
+                <div class="col-auto px-6 float-right">
+                    <app-genericbutton [text]="next" [border]="black" [redirect]="payment"></app-genericbutton>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

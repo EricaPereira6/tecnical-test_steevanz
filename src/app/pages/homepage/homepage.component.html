@@ -1,20 +1,19 @@
 <div class="homepage expand-lg d-flex align-items-center justify-content-center" id="page">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-6" id="intro">
+            <div class="col-sm-6">
                 <h2 class="d-flex align-items-center">FRONTEND DEVELOPER</h2>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
                 </p>
                 <div class="row mt-8">
-                    <div class="col-sm-1">
-                        <h3 id="fifty">50€</h3>
+                    <div class="col-auto">
+                        <h3 class="fifty p-0 m-0">50€</h3>
                     </div>
-                    <div class="col-sm-1 mt-3 ml-2">
-                       <p id="per-month">per month</p>
+                    <div class="col d-flex align-items-end p-0">
+                       <p class="per-month p-0 m-0">per month</p>
                     </div>
-                    <div class="col-sm-7"></div>
-                    <div class="col-sm-2">
-                        <button type="button" class="btn btn-outline-light d-flex align-items-center justify-content-center">SUBSCRIBE</button>
+                    <div class="col-auto float-right d-flex align-items-end">
+                        <app-genericbutton [text]="text" [border]="black"></app-genericbutton>
                     </div>
                 </div>
             </div>

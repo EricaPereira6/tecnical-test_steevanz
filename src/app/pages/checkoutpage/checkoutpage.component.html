@@ -1,40 +1,53 @@
 <div class="checkoutpage" id="page">
-    <app-checkoutnav></app-checkoutnav>
+    <app-checkoutnav [st]="whitebutton" [nd]="blackbutton" [rd]="blackbutton" [th]="blackbutton"></app-checkoutnav>
     <app-freedelivbar></app-freedelivbar>
     <div class="checkoutpage-page">
-            <div class="container-fluid">
-                <div class="row py-4">
-                    <div class="col-auto">
-                        <img class="float-right" src="assets/images/arrow-left.png"/>
-                    </div>
-                    <div class="col-sm-2 px-0" id="text">Continue Shopping</div>
+        <div class="container-fluid">
+            <div class="row py-3">
+                <div class="col-auto">
+                    <img class="float-right" src="assets/images/arrow-left.png"/>
                 </div>
-                <div class="row pb-5">
-                    <div class="col-auto">Btn</div>
-                    <div class="col check-card">Check your cart</div>
+                <div class="col-sm-2 px-0" id="text">Continue Shopping</div>
+            </div>
+            <div class="row py-3">
+                <div class="col-auto d-flex align-items-center">
+                    <app-ckoutbutton [text]="text1" [color]="nottintedblack" [border]="blackborder"></app-ckoutbutton>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="row">
-                            <div class="col-auto">
-                                <h1>FRONTEND DEVELOPER</h1>
-                            </div>
-                            <div class="col">
-                                <img src="assets/images/Delete.png" class="img-fluid"/>
-                            </div>
+                <div class="col check-card px-0">Check your cart</div>
+            </div>
+            <div class="row py-3">
+                <div class="col-auto">
+                    <div class="row">
+                        <div class="col-auto py-3">
+                            <h2>FRONTEND</h2>
                         </div>
-                        <div class="subtext py-4">One position available every month.</div>
-                        <img src="assets/images/page_2.png" class="img-fluid py-4 offset-sm-1" alt="Responsive image"/>
-                    </div>
-                    <div class="col">
-                        <div class="coupon float-right">
-                            Do you have a discount coupon?
+                        <div class="col-auto py-3 pl-0">
+                            <h2>DEVELOPER</h2>
+                        </div>
+                        <div class="col">
+                            <img class="icon" src="assets/images/Delete.png"/>
                         </div>
                     </div>
-                </div> 
+                    <div class="subtext py-3">One position available every month.</div>
+                    <img class="img-fluid py-3 offset-sm-1" src="assets/images/page_2.png" alt="Responsive image"/>
+                </div>
+                <div class="col">
+                    <div class="coupon pr-8 float-right">
+                        <app-textinput [inputtext]="itext" [labeltext]="ltext" [labelstyle]="style" [icon]="iconsrc" [inputbar]="border"></app-textinput>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <app-totalpermonth  [size]="size" [quantity]="quantity" [additionalcomment]="comment"></app-totalpermonth>
+        <div class="container-fluid">
+            <div class="row py-6">
+                <div class="col px-6">
+                    <app-genericbutton [text]="clean" [border]="white" [redirect]="homepage"></app-genericbutton>
+                </div>
+                <div class="col-auto px-6 float-right">
+                    <app-genericbutton [text]="next" [border]="black" [redirect]="yourdata"></app-genericbutton>
+                </div>
             </div>
-            <div class="total">
-                Total: 50€ <p class="col-auto align-items-end">per month.</p>
-            </div>
+        </div>
     </div>
 </div>

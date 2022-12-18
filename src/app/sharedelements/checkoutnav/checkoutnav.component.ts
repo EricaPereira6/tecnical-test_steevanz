@@ -7,13 +7,16 @@ import { Component, Input } from '@angular/core';
 })
 export class CheckoutnavComponent {
 
-  @Input() text1: String = '1';
-  @Input() text2: String = '2';
-  @Input() text3: String = '3';
-  @Input() text4: String = '4';
-  @Input() tinted: String = 'tinted';
-  @Input() nottinted: String = 'nottinted';
+  @Input() text1: string = '1';
+  @Input() text2: string = '2';
+  @Input() text3: string = '3';
+  @Input() text4: string = '4';
+  @Input() tinted: string = 'tinted';
+  @Input() nottintedwhite: string = 'not-tinted-white';
+  @Input() whiteborder: string = 'white-border';
 
-
-
+  @Input() st: string = '';
+  @Input() nd: string = '';
+  @Input() rd: string = '';
+  @Input() th: string = '';
 }

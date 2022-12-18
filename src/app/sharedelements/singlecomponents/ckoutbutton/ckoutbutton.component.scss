@@ -6,9 +6,6 @@
 
     top: 8.67%;
     bottom: 88.67%;
-
-    border: 1px solid #FFFFFF;
-
     
     display: flex;
     align-items: center;
@@ -20,10 +17,23 @@
     color: #1A1A1A;
     background: white;
 }
-#nottinted
+#not-tinted-white
 {
     color: white;
     background: transparent;
+}
+#not-tinted-black
+{
+    color: #1A1A1A;
+    background: transparent;
+}
+.white-border
+{
+    border: 1px solid #FFFFFF;
+}
+.black-border
+{
+    border: 1px solid #1A1A1A;
 }
 p
 {

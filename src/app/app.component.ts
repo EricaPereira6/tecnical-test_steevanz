@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my_tecnical_test_steevanz';
-}
+  showNavbar = true;
+  showFooter = true;
+  constructor(){
+    if (window.location.pathname == '/success') {
+      this.showNavbar = false;
+      this.showFooter = false;
+    }
+  }
+} 

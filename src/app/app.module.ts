@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,10 @@ import { CheckoutpageComponent } from './pages/checkoutpage/checkoutpage.compone
 import { CheckoutnavComponent } from './sharedelements/checkoutnav/checkoutnav.component';
 import { CkoutbuttonComponent } from './sharedelements/singlecomponents/ckoutbutton/ckoutbutton.component';
 import { FreedelivbarComponent } from './sharedelements/freedelivbar/freedelivbar.component';
+import { GenericbuttonComponent } from './sharedelements/singlecomponents/genericbutton/genericbutton.component';
+import { TextinputComponent } from './sharedelements/singlecomponents/textinput/textinput.component';
+import { TotalpermonthComponent } from './sharedelements/totalpermonth/totalpermonth.component';
+import { RestcountriesComponent } from './sharedelements/restcountries/restcountries.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +31,16 @@ import { FreedelivbarComponent } from './sharedelements/freedelivbar/freedelivba
     CheckoutpageComponent,
     CheckoutnavComponent,
     CkoutbuttonComponent,
-    FreedelivbarComponent
+    FreedelivbarComponent,
+    GenericbuttonComponent,
+    TextinputComponent,
+    TotalpermonthComponent,
+    RestcountriesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,8 +7,9 @@ import { Component, Input } from '@angular/core';
 })
 export class CkoutbuttonComponent {
 
-  @Input() text: String = '';
-  @Input() color: String = '';
+  @Input() text: string = '';
+  @Input() color: string = '';
+  @Input() border: string = '';
 
   constructor(){
 
